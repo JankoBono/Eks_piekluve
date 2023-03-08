@@ -25,7 +25,9 @@ def create():
                     enable_click_events=True, 
                     key='-TABULA-',
                     row_height=35,
-                    tooltip='darbu tabula')]
+                    tooltip='darbu tabula'
+                 )
+        ]
     ]
 
     tabula = sg.Window("darba datu logs", 
@@ -39,5 +41,6 @@ def create():
                 col_num_clicked = event[2][1]
                 new_table = sort_table(darbu_masivs, col_num_clicked)
                 tabula['-TABULA-'].update(new_table)
+        
         
     tabula.close()

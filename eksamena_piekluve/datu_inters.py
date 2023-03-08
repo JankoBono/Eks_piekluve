@@ -13,7 +13,13 @@ def parbaude():
     for row in cursor:
         results.append(list(row))
     return results
-def izdzest_darbu(darba_id):
+def izdzest_darbu(dzest_id):
     conn = sqlite3.connect('data.db')
-    conn.execute("DELETE from dati where darba_id = ?",(darba_id))
+    conn.execute("DELETE FROM dati WHERE darba_id = ?", (dzest_id))
+    conn.commit()
+    conn.close()
+def izmaina_summu(mainit_id,uz_ko):
+    conn = sqlite3.connect('data.db')
+    conn.execute("UPDATE dati set summa = ? where darba_id = ?", (uz_ko,mainit_id))
+    conn.commit()
     conn.close()
