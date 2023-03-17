@@ -1,6 +1,5 @@
 import PySimpleGUI as sg
-import datu_inters
-import tabula
+import datu_inters, paroles_logs, tabula
 import sqlite3
 
 conn = sqlite3.connect('data.db')
@@ -33,6 +32,7 @@ window = sg.Window("gmgm", layout)
 
 
 while True:
+    paroles_logs.protect()
     event, values = window.read()
     # print(event, values)  # izdrukā bibliotēkas vērtības
     
