@@ -5,12 +5,12 @@ import hashlib
 
 def protect():
         layout = [
-                [sg.Text("Enter your email address:"), sg.Input(key='-EMAIL-', do_not_clear=True, size=(30, 1))],
-                [sg.Text('Enter Password', size=(15, 1)), sg.InputText('', key='-PASSWORD-', password_char='*', size=(15, 1))],
-                [sg.Button("Submit"),sg.Button("Exit")]
+                [sg.Text("Ievadi lietotājvārdu:"), sg.Input(key='-EMAIL-', do_not_clear=True, size=(30, 1))],
+                [sg.Text('Ievadi paroli:', size=(15, 1)), sg.InputText('', key='-PASSWORD-', password_char='*', size=(15, 1))],
+                [sg.Button("Iesniegt"),sg.Button("Iziet")]
                 ]
 
-        password_window = sg.Window('привет Airlines', layout, modal=True)
+        password_window = sg.Window('Gabaldarbinieku algas kopotājs', layout, modal=True)
 
         def verify_password(password):
                 hash = '8b15670ea8fb9647e783263380bbbadf0cfa543a11dd7140fecf34cc4b710266'
@@ -20,7 +20,7 @@ def protect():
                 if hash == password_hash:
                         return True
                 return False
-        
+
         def verify_email_address(email_address):
                 user_email_addresses = ['janis', 'kokle', 'kubiks']
                 if email_address in user_email_addresses:
@@ -29,9 +29,9 @@ def protect():
 
         while True:
                 event, values = password_window.read()
-                if event == "Exit" or event == sg.WIN_CLOSED:
+                if event == "Iziet" or event == sg.WIN_CLOSED:
                         exit()
-                if event == 'Submit':
+                if event == 'Iesniegt':
                         email_input_value = values['-EMAIL-']
                         password_input_value = values['-PASSWORD-']
                         if verify_password(password_input_value) and verify_email_address(email_input_value):
