@@ -16,7 +16,6 @@ def protect():
                 hash = '8b15670ea8fb9647e783263380bbbadf0cfa543a11dd7140fecf34cc4b710266'
                 password_utf = password.encode('utf-8')
                 password_hash = hashlib.sha256(password_utf).hexdigest()
-                print(password_hash)
                 if hash == password_hash:
                         return True
                 return False
@@ -37,5 +36,6 @@ def protect():
                         if verify_password(password_input_value) and verify_email_address(email_input_value):
                                 break
                         else:
+                                sg.popup("nav ievadīta pareiza parole vai lietotājvārds")
                                 continue
         password_window.close()
