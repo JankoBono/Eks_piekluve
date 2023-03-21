@@ -2,9 +2,9 @@
 
 kods nav vēl noformēts un aprakstīts līdz galam, bet visas funkcijas ir strādājošas
 
-Tātad, lai palaistu kodu vajag izmantot tikai datu_inters.py, guis.py, paroles_logs.py un tabula.py
+Tātad, lai palaistu kodu vajag izmantot tikai datu_inters.py, main.py, paroles_logs.py un tabula.py
 
-kods uzsāk savu darbību, kad runo guis.py
+kods uzsāk savu darbību, kad runo main.py
 
 derīgie lietotājvārdi - janis, kokle, kubiks
 
