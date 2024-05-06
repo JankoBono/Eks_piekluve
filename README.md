@@ -4,6 +4,8 @@ kods nav vēl noformēts un aprakstīts līdz galam, bet visas funkcijas ir str�
 
 Tātad, lai palaistu kodu vajag izmantot tikai datu_inters.py, main.py, paroles_logs.py un tabula.py
 
+sīkāk visas funkcijas skatīt failā gdas(1).docx
+
 kods uzsāk savu darbību, kad runo main.py
 
 derīgie lietotājvārdi - janis, kokle, kubiks
